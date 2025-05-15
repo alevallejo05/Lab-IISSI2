@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit photo</title>
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="/js/edit_photo.js" type="module"></script>
+    <script src="js/header.js" type="module"></script>
+    <script src="./js/utils/include.js"></script>
+</head>
+
+<body class="dark">
+    <div class="container">
+        <div id="page-header"></div>
+
+        <h2 id="page-title">Editing a photo</h2>
+
+        <div id="errors"></div>
+
+        <form id="form-photo-upload">
+            <div class="form-group">
+                <label for="input-url">URL:</label>
+                <input required type="text" class="form-control" id="input-url" name="url" placeholder="Photo URL">
+            </div>
+            <div class="form-group">
+                <label for="input-title">Title:</label>
+                <input required type="text" class="form-control" id="input-title" name="title" placeholder="Title">
+            </div>
+            <div class="form-group">
+                <label for="input-description">Description:</label>
+                <textarea class="form-control" id="input-description" name="description"
+                    placeholder="Describe your image..." rows="4"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="input-visibility">Visibility:</label>
+                <select required class="form-control" id="input-visibility" name="visibility">
+                    <option value="Public">Public</option>
+                    <option value="Private">Private</option>
+                </select>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    include("header.html", "#page-header");
+</script>

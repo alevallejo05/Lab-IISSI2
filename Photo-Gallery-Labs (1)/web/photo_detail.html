@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Detalles</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="/js/libs/bootstrap.min.js"></script>
+    <script src="/js/photo_detail.js" type="module"></script>
+    <script src="/js/libs/axios.min.js"></script>
+    <script src="js/header.js" type="module"></script>
+</head>
+
+<body class="bg-dark text-light">
+    <div class="container">
+        <div id="errors"></div>
+
+        <div class="row text-center">
+
+            <div class="col-md-8" id="photo-details-column"></div>
+
+            <div class="col-md-4" id="actions-col">
+                <div>
+                    <button id="button-edit" class="btn btn-primary mt-3">Edit this photo</button>
+                    <button id="button-delete" class="btn btn-danger mt-3">Delete this photo</button>
+                </div>
+
+                <form>
+                    <div class="form-group" id="rate-container">
+                        <label for="rating-input">Rate this photo:</label>
+
+                        <select class="form-control text-light bg-dark" id="rating-input" name="rating"
+                            class="form-control">
+                            <option value="1">*</option>
+                            <option value="2">**</option>
+                            <option value="3">***</option>
+                            <option value="4">****</option>
+                            <option value="5">*****</option>
+                        </select>
+                        <button type="submit" class="btn btn-success mt-3">Rate</button>
+                    </div>
+                </form>
+
+                <div class="col-md mt-3" id="return-gallery-container">
+                    <a href="index.html" class="btn btn-primary">Return to the gallery</a>
+                </div>
+            </div>
+
+            <div class="card mt-5 text-light bg-dark" id="comments-container">
+                <ul class="list-group list-group-flush text-light bg-dark" id="comments"></ul>
+
+                <form class="mt-5" id="comment-form">
+                    <input type="text" class="form-control text-light bg-dark" id="comment-input" name="text"
+                        placeholder="Write your comment">
+
+                    <div class="col-md text-center">
+                        <button type="submit" class="btn btn-primary mt-3">Send</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
