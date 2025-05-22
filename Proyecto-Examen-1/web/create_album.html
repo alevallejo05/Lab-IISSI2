@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_album.js" type="module"></script>
+
+    <title id="page-title">Create a new album</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div class="container">
+        <div id="errors"></div>
+        
+        <form id="create-form">
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="title-input">Title:</label>
+                        <input type="text" class="form-control text-light bg-dark" id="title-input" name="title"
+                            placeholder="Title">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="artist-input">Artist:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="artist-input" name="artist"
+                        placeholder="Artist">
+                </div>
+
+                <div class="form-group">
+                    <label for="date-input">Realease date:</label>
+                    <input type="date" class="form-control text-light bg-dark" id="date-input" name="releaseDate">
+                </div>
+
+                <div class="form-group">
+                    <label for="url-input">Image url:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="url-input" name="imageUrl"
+                        placeholder="Url">
+                </div>
+
+                <div class="form-group">
+                    <label for="artist-input">Number of tracks:</label>
+                    <input type="number" class="form-control text-light bg-dark" id="tracks-input" name="numTracks"
+                        placeholder="Tracks">
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>
