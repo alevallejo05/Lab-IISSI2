@@ -1,0 +1,10 @@
+img.photo-user-avatar {
+    max-width: 30px;
+    height: auto;
+    border-radius: 50%;
+}
+
+img.event-img {
+    width: 100%;
+    height: auto;
+}

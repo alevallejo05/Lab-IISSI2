@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script src="js/libs/axios.min.js"></script>
+    <script src="js/utils/include.js"></script>
+
+    <script src="js/header.js" type="module"></script>
+    <script src="js/create_event.js" type="module"></script>
+
+    <title id="page-title">Create a new event</title>
+</head>
+
+<body>
+    <div id="page-header"></div>
+
+    <div class="container">
+        <div id="errors"></div>
+        
+        <form id="create-form">
+            <div class="row">
+                <div class="col-md">
+                    <div class="form-group">
+                        <label for="title-input">User id:</label>
+                        <input type="number" class="form-control text-light bg-dark" id="user-id-input" name="userId" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="title-input">Name:</label>
+                        <input type="text" class="form-control text-light bg-dark" id="name-input" name="name"
+                            placeholder="Name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="artist-input">Event date:</label>
+                    <input type="date" class="form-control text-light bg-dark" id="date-input" name="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-input">Max participants:</label>
+                    <input type="number" class="form-control text-light bg-dark" id="max-participants-input" name="maxParticipants" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="date-input">Place:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="place-input" name="place"
+                    placeholder="Place" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="url-input">Image url:</label>
+                    <input type="text" class="form-control text-light bg-dark" id="url-input" name="imageUrl"
+                        placeholder="Url" required>
+                </div>
+            </div>
+            <hr>
+
+            <div class="row">
+                <div class="col-md text-center">
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        include("header.html", "#page-header");
+    </script>
+</body>
+
+</html>

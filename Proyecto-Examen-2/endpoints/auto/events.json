@@ -1,0 +1,68 @@
+{
+    "getAll": {
+        "description": "Gets all entries from 'events'",
+        "route": "/events",
+        "method": "GET",
+        "sql": "SELECT * FROM events",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "getById": {
+        "description": "Gets an entry from 'events' by its primary key",
+        "route": "/events/$eventId",
+        "method": "GET",
+        "sql": "SELECT * FROM events WHERE eventId = $eventId",
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "create": {
+        "description": "Creates a new entry in 'events'",
+        "route": "/events",
+        "method": "POST",
+        "sql": "INSERT INTO events (userId, name, eventDate, maxParticipants, place, imageUrl) VALUES ($userId, $name, $eventDate, $maxParticipants, $place, $imageUrl)",
+        "request_body_params": [
+            "userId",
+            "name",
+            "eventDate",
+            "maxParticipants",
+            "place",
+            "imageUrl"
+        ],
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "update": {
+        "description": "Updates an existing entry in 'events' by its primary key",
+        "route": "/events/$eventId",
+        "method": "PUT",
+        "sql": "UPDATE events SET userId = $userId, name = $name, eventDate = $eventDate, maxParticipants = $maxParticipants, place = $place, imageUrl = $imageUrl WHERE eventId = $eventId",
+        "request_body_params": [
+            "userId",
+            "name",
+            "eventDate",
+            "maxParticipants",
+            "place",
+            "imageUrl"
+        ],
+        "auth_required": false,
+        "allowed_roles": [
+            "*"
+        ]
+    },
+    "delete": {
+        "description": "Deletes an existing entry in 'events' by its primary key",
+        "route": "/events/$eventId",
+        "method": "DELETE",
+        "sql": "DELETE FROM events WHERE eventId = $eventId",
+        "auth_required": true,
+        "allowed_roles": [
+            "*"
+        ]
+    }
+}
